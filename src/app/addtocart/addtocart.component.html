@@ -1,4 +1,5 @@
 <h3>Cart</h3>
 Cart Items: {{cartItems}}<br> <br>
-<button (click)="addToCart()">Add to Cart</button> &nbsp;
-<button (click)="removeFromCart()">Remove from Cart</button>
+<button (click)="addToCart()" [disabled]="cartItems>=10">Add to Cart</button> &nbsp;
+<button (click)="removeFromCart()" [disabled]="cartItems<=0">Remove from Cart</button> <br> <br>
+<app-addproducts></app-addproducts>

@@ -1,0 +1,7 @@
+Product Name: <input type="text" [(ngModel)]="txtbox"> {{txtbox.length}}<br> <br>
+<button (click)="createProducts()"[disabled]="txtbox.length<3" >Add Products</button>
+<ul>
+    <li *ngFor="let arr of ProductList;index as i">
+{{i+1}}. {{arr}}
+</li>
+</ul>
